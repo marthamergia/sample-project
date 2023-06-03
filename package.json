@@ -1,0 +1,29 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "Thanks for your interest.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marthamergia/sample-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marthamergia/sample-project/issues"
+  },
+  "homepage": "https://github.com/marthamergia/sample-project#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.12.0",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/graphql": "^14.5.0"
+  }
+}
