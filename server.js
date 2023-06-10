@@ -1,5 +1,9 @@
 const express = require('express')
 const { ApolloServer, gql } = require('apollo-server-express')
+const { Clients } = require('./path/to/models');
+const { Additionalinfo } = require('./path/to/models');
+
+
 
 const app = express()
 
@@ -24,6 +28,7 @@ const typeDefs = gql`
     clients: [Client]
     additionalinfo: [additionalInfo]
   }
+  
 `
 
 const clients = [
@@ -75,9 +80,13 @@ const additionalInfo = [
 const resolvers = {
   Query: {
     clients: () => clients,
-    additionalinfo: () => additionalInfo
-  }
+    additionalinfo: () => additionalInfo,
+    clients: () => Clients.findAll(),
+    additionalinfo: () => Additionalinfo.findAll()
+  },
 }
+
+
 
 async function startServer() {
   const server = new ApolloServer({ typeDefs, resolvers })
