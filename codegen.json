@@ -1,0 +1,13 @@
+{
+  "schema": "./server.js",
+  "documents": "./client/src/queries.js",
+  "generates": {
+    "./client/src/GeneratedTypes.tsx": {
+      "plugins": [
+        "typescript",
+        "typescript-operations",
+        "typescript-react-apollo"
+      ]
+    }
+  }
+}
